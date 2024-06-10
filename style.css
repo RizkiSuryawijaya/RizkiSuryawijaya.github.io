@@ -790,3 +790,24 @@ button:hover {
 }
 
 
+/* Add this to your existing CSS file */
+
+/* Default styles for larger screens */
+.box-projek-terbaru {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box-projek-terbaru .box {
+  flex: 1 1 calc(50% - 20px); /* Two projects per row */
+  box-sizing: border-box;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  .box-projek-terbaru .box {
+      flex: 1 1 100%; /* Full width for each project box */
+  }
+}
