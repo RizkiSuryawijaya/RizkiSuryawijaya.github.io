@@ -811,3 +811,50 @@ button:hover {
       flex: 1 1 100%; /* Full width for each project box */
   }
 }
+
+/* Default styles for larger screens */
+.box-projek-terbaru,
+.box-pantai {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box-projek-terbaru .box,
+.box-pantai .box {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    box-sizing: border-box;
+}
+
+.box-projek-terbaru .box img,
+.box-pantai .box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .box-projek-terbaru .box,
+    .box-pantai .box {
+        flex: 1 1 100%; /* Full width for each item */
+    }
+
+    .box-projek-terbaru,
+    .box-pantai {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box-projek-terbaru .box,
+    .box-pantai .box {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .box-projek-terbaru,
+    .box-pantai {
+        gap: 5px;
+    }
+}
