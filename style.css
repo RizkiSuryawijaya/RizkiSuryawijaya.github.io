@@ -830,3 +830,24 @@ button:hover {
   color: #666;
   font-size: 1em;
 }
+
+.box-details {
+  margin-top: 15px;
+  text-align: center; /* Teks diatur menjadi rata tengah */
+}
+
+.box-details h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+  white-space: normal; /* Memastikan teks tidak terpotong */
+  overflow-wrap: break-word; /* Memungkinkan kata-kata panjang untuk pindah ke baris berikutnya */
+}
+
+.box-details p {
+  margin: 0;
+  color: #666;
+  font-size: 1em;
+  white-space: normal; /* Memastikan teks tidak terpotong */
+  overflow-wrap: break-word; /* Memungkinkan kata-kata panjang untuk pindah ke baris berikutnya */
+}
