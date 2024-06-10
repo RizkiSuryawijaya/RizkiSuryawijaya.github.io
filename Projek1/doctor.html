@@ -5,6 +5,8 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
@@ -31,22 +33,24 @@
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .logo a {
+        .logo a, .logo button {
             padding: 10px 20px;
             text-decoration: none;
             color: gray;
             font-size: 18px;
             font-weight: bold;
             transition: color 0.3s, border-bottom 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
-        .logo a:hover {
+        .logo a:hover, .logo button:hover {
             color: #428bca;
             border-bottom: 2px solid #428bca;
         }
         .bottom {
             width: 100%;
             color: #000;
-
             font-family: 'Roboto', sans-serif;
             font-size: 20px;
             padding: 20px;
@@ -55,7 +59,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
-       
         .column {
             flex: 1;
             padding: 20px;
@@ -111,8 +114,6 @@
             font-size: 16px;
             margin: 0;
         }
-
-        
         button {
             padding: 15px 30px;
             color: #fff;
@@ -127,19 +128,15 @@
             margin: 0 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         button:hover {
             background-color: #f30e0e;
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
-
         button a {
             text-decoration: none;
             color: inherit;
         }
-
-        /* Styling untuk bagian navigasi bawah */
         .nav_down {
             position: relative;
             width: 100%;
@@ -151,7 +148,71 @@
             text-align: center;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
-
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .doctors h2 {
+                font-size: 32px;
+            }
+            .doctors p {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 992px) {
+            .doctors h2 {
+                font-size: 28px;
+            }
+            .doctors p {
+                font-size: 14px;
+            }
+            .doctor-card {
+                width: 180px;
+            }
+            .logo a, .logo button {
+                font-size: 16px;
+            }
+            button {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+        }
+        @media (max-width: 768px) {
+            .doctors h2 {
+                font-size: 24px;
+            }
+            .doctors p {
+                font-size: 12px;
+            }
+            .doctor-card {
+                width: 160px;
+            }
+            .logo a, .logo button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+        @media (max-width: 576px) {
+            .doctors h2 {
+                font-size: 20px;
+            }
+            .doctors p {
+                font-size: 10px;
+            }
+            .doctor-card {
+                width: 140px;
+            }
+            .logo a, .logo button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,8 +245,6 @@
         </div>
     </div>
 
-   
-
     <div class="doctors">
         <h2>DOKTER</h2>
         <p>Kami memiliki tim dokter yang terdiri dari para profesional berpengalaman dan berdedikasi. Mereka siap memberikan pelayanan medis terbaik untuk memenuhi kebutuhan kesehatan Anda. Berkomitmen pada kualitas dan perawatan yang penuh kasih, dokter-dokter kami berada di garis depan dalam memberikan solusi kesehatan yang inovatif dan efektif. Kenali para ahli kami di bawah ini:</p>
@@ -210,7 +269,6 @@
             <p>Spesialis Saraf</p>
         </div>
     </div>
-
 
     <div class="nav_down">
         <div>

@@ -6,10 +6,11 @@
 
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
     <style>
-        /* Mengatur margin dan padding semua elemen menjadi 0 */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: url("/static/image/bcindex.jpg") no-repeat center center fixed;
@@ -22,9 +23,9 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Styling untuk bagian atas */
         .top {
             width: 100%;
             background-color: rgba(47, 165, 235, 0.9);
@@ -35,7 +36,6 @@
             padding: 10px;
         }
 
-        /* Styling untuk logo */
         .logo {
             width: 100%;
             border-bottom: 2px solid #f0f0f0;
@@ -46,21 +46,23 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .logo a {
+        .logo a, .logo button {
             padding: 10px 20px;
             text-decoration: none;
             color: gray;
             font-size: 18px;
             font-weight: bold;
             transition: color 0.3s, border-bottom 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
 
-        .logo a:hover {
+        .logo a:hover, .logo button:hover {
             color: #428bca;
             border-bottom: 2px solid #428bca;
         }
 
-        /* Styling untuk bagian tengah */
         .middle {
             width: 100%;
             border-bottom: 2px solid #f0f0f0;
@@ -83,7 +85,6 @@
             margin-top: 10px;
         }
 
-        /* Styling untuk bagian gambar rumah sakit */
         .middle img {
             margin: 20px 0;
             max-width: 80%;
@@ -92,7 +93,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Styling untuk bagian bawah */
         .bottom {
             width: 100%;
             border-bottom: 2px solid #f0f0f0;
@@ -123,7 +123,6 @@
             box-sizing: border-box;
         }
 
-        /* Styling untuk input, select, textarea, dan tombol */
         input[type="text"],
         select,
         textarea {
@@ -162,7 +161,6 @@
             color: inherit;
         }
 
-        /* Styling untuk bagian navigasi bawah */
         .nav_down {
             position: relative;
             width: 100%;
@@ -175,14 +173,12 @@
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Styling untuk gambar */
         .footer-logo {
             margin: 10px auto;
             display: block;
             width: 150px;
         }
 
-        /* Styling untuk gallery */
         .gallery {
             padding: 50px 20px;
             text-align: center;
@@ -219,6 +215,108 @@
 
         .gallery-images img:hover {
             transform: scale(1.05);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .middle p {
+                font-size: 36px;
+            }
+
+            .middle p span {
+                font-size: 18px;
+            }
+
+            .bottom h4 {
+                font-size: 22px;
+            }
+
+            .bottom p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .middle p {
+                font-size: 32px;
+            }
+
+            .middle p span {
+                font-size: 16px;
+            }
+
+            .bottom h4 {
+                font-size: 20px;
+            }
+
+            .bottom p {
+                font-size: 14px;
+            }
+
+            .logo a, .logo button {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .middle p {
+                font-size: 28px;
+            }
+
+            .middle p span {
+                font-size: 14px;
+            }
+
+            .bottom h4 {
+                font-size: 18px;
+            }
+
+            .bottom p {
+                font-size: 12px;
+            }
+
+            .logo a, .logo button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .middle p {
+                font-size: 24px;
+            }
+
+            .middle p span {
+                font-size: 12px;
+            }
+
+            .bottom h4 {
+                font-size: 16px;
+            }
+
+            .bottom p {
+                font-size: 10px;
+            }
+
+            .logo a, .logo button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
