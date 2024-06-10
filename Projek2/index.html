@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Halaman Login</title>
+
+</head>
+
+<body>
+    
+    <div class="buttonHeader">
+
+    <button onclick="navigateTo('/index.html')"><i class="fa fa-home"></i> Beranda</button>
+
+    </div>
+    
+    
+    <div class="header">
+        <h1>E-Echanted Books</h1>
+        <h1>My Untirta</h1>
+        <img src="logo untirta.png" alt="" class="logo-untirta">
+    </div>
+
+    <div class="login-container">
+        <form action="register.html" method="post">
+            <h2>Login</h2>
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Tombol "Masuk" memiliki atribut id="masukButton" -->
+            <button type="button" id="masukButton">Masuk</button>
+            <p><a href="register.html" class="buat-akun-baru">Buat Akun Baru</a></p>
+            <p><a href="lupa-password.html" class="lupa-password">Lupa Password</a></p>
+        </form>
+
+    </div>
+
+    <script>
+        // JavaScript untuk menangani peristiwa saat tombol "Masuk" diklik
+        document.getElementById("masukButton").addEventListener("click", function() {
+            window.location.href = "masuk.html"; // Mengarahkan pengguna ke masuk.html saat tombol diklik
+        });
+
+        
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    
+    </script>
+</body>
+
+</html>

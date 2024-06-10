@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rumah Sakit Untirta</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    
+    <style>
+        /* Mengatur margin dan padding semua elemen menjadi 0 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("/static/image/bcindex.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling untuk bagian atas */
+        .top {
+            width: 100%;
+            background-color: rgba(47, 165, 235, 0.9);
+            border-bottom: 2px solid #f0f0f0;
+            color: #fff;
+            font-family: Calibri, sans-serif;
+            text-align: right;
+            padding: 10px;
+        }
+
+        /* Styling untuk logo */
+        .logo {
+            width: 100%;
+            border-bottom: 2px solid #f0f0f0;
+            font-family: Calibri, sans-serif;
+            padding: 20px 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: gray;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .logo a:hover {
+            color: #428bca;
+            border-bottom: 2px solid #428bca;
+        }
+
+        /* Styling untuk bagian tengah */
+        .middle {
+            width: 100%;
+            border-bottom: 2px solid #f0f0f0;
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .middle p {
+            font-weight: bold;
+            color: #fff;
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .middle p span {
+            display: block;
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+
+        /* Styling untuk bagian gambar rumah sakit */
+        .middle img {
+            margin: 20px 0;
+            max-width: 80%;
+            height: auto;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling untuk bagian bawah */
+        .bottom {
+            width: 100%;
+            border-bottom: 2px solid #f0f0f0;
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .bottom h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .bottom p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+            box-sizing: border-box;
+        }
+
+        /* Styling untuk input, select, textarea, dan tombol */
+        input[type="text"],
+        select,
+        textarea {
+            padding: 12px;
+            margin: 10px 0;
+            width: calc(100% - 24px);
+            max-width: 550px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 15px 30px;
+            color: #fff;
+            font-size: 20px;
+            background-color: #0037ff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            text-align: center;
+            margin: 0 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #f11616;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Styling untuk bagian navigasi bawah */
+        .nav_down {
+            position: relative;
+            width: 100%;
+            background-color: rgba(47, 165, 235, 0.9);
+            border-top: 2px solid #f0f0f0;
+            color: #fff;
+            font-family: Calibri, sans-serif;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling untuk gambar */
+        .footer-logo {
+            margin: 10px auto;
+            display: block;
+            width: 150px;
+        }
+
+        /* Styling untuk gallery */
+        .gallery {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .gallery h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .gallery p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .gallery-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-images img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        Hubungi Kami 083195008689 | muhamadrizkisurya15@gmail.com
+    </div>
+
+    <div class="logo">
+        <button onclick="navigateTo('/index.html')"><i class="fa fa-home"></i> Beranda</button>
+        <a href="utama.html">RUMAH SAKIT</a>
+        <a href="about.html">TENTANG KAMI</a>
+        <a href="doctor.html">DOKTER</a>
+        <a href="contact.html">HUBUNGI KAMI</a>
+    </div>
+
+    <div class="middle">
+        <p>Layanan Perawatan Kesehatan<br><span>Kami Peduli Terhadap Kesehatan Anda</span></p>
+        <img src="/static/image/Tengah.jpg" alt="Rumah Sakit Untirta">
+    </div>
+
+    <div class="gallery">
+        <p>Rumah Sakit Mitra Siaga dengan bangga menyajikan galeri foto ini sebagai gambaran komitmen kami terhadap pelayanan kesehatan terbaik. Dari fasilitas medis modern hingga tenaga medis profesional yang berdedikasi, setiap foto mencerminkan upaya kami untuk memberikan perawatan yang unggul dan inovatif. Kami mengundang Anda untuk melihat lebih dekat dan memahami dedikasi kami dalam menjaga kesehatan dan kesejahteraan masyarakat.</p>
+        <div class="gallery-images">
+            <img src="/static/image/one.jpg" alt="Image 1">
+            <img src="/static/image/Two.jpg" alt="Image 2">
+            <img src="/static/image/Tree.jpg" alt="Image 3">
+            <img src="/static/image/For.jpg" alt="Image 4">
+        </div>
+    </div>
+    
+    <div class="nav_down">
+        <img src="/static/image/01.jpg" alt="Rumah Sakit Untirta" class="footer-logo">
+        &copy; Mitra Siaga, site designed & developed by Muhamad Rizki Suryawijaya
+    </div>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
