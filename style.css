@@ -833,3 +833,40 @@ button:hover {
   white-space: normal; /* Memastikan teks tidak terpotong */
   overflow-wrap: break-word; /* Memungkinkan kata-kata panjang untuk pindah ke baris berikutnya */
 }
+
+
+/* Ensure text does not get cut off on smaller screens */
+.kegiatan-wrapper .box-details h3, 
+.kegiatan-wrapper .box-details h4, 
+.kegiatan-wrapper .box-details p {
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+/* Responsive Styles for "Kegiatan Saat Ini" Section */
+@media (max-width: 768px) {
+    .kegiatan-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kegiatan-wrapper .box {
+        width: 90%;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    }
+
+    .kegiatan-wrapper .box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .kegiatan-wrapper .box-details h3 {
+        font-size: 20px;
+    }
+
+    .kegiatan-wrapper .box-details p {
+        font-size: 16px;
+    }
+}
