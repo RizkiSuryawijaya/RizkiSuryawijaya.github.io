@@ -4,7 +4,7 @@
     <title>Rumah Sakit Mitra Siaga - Tentang Kami</title>
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,15 +30,18 @@
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .logo a {
+        .logo a, .logo button {
             padding: 10px 20px;
             text-decoration: none;
             color: gray;
             font-size: 18px;
             font-weight: bold;
             transition: color 0.3s, border-bottom 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
-        .logo a:hover {
+        .logo a:hover, .logo button:hover {
             color: #428bca;
             border-bottom: 2px solid #428bca;
         }
@@ -135,17 +138,61 @@
             color: inherit;
         }
 
-        /* Styling untuk bagian navigasi bawah */
-        .nav_down {
-            position: relative;
-            width: 100%;
-            background-color: rgba(47, 165, 235, 0.9);
-            border-top: 2px solid #f0f0f0;
-            color: #fff;
-            font-family: Calibri, sans-serif;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .bottom h4 {
+                font-size: 22px;
+            }
+            .bottom p {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 992px) {
+            .bottom h4 {
+                font-size: 20px;
+            }
+            .bottom p {
+                font-size: 14px;
+            }
+            .logo a, .logo button {
+                font-size: 16px;
+            }
+            button {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+        }
+        @media (max-width: 768px) {
+            .bottom h4 {
+                font-size: 18px;
+            }
+            .bottom p {
+                font-size: 12px;
+            }
+            .logo a, .logo button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+        @media (max-width: 576px) {
+            .bottom h4 {
+                font-size: 16px;
+            }
+            .bottom p {
+                font-size: 10px;
+            }
+            .logo a, .logo button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
         }
 
     </style>
@@ -155,31 +202,17 @@
     <div class="top">
         <div>
             Hubungi Kami 083195008689 | muhamadrizkisurya15@gmail.com
-    </div>
-        </div>
+         </div>
+        
     </div>
 
+     
     <div class="logo">
-        <div>
-            <table>
-                <tr>
-                    <td width="600px" style="font-size:50px;font-family:'Times New Roman', Times, serif;">
-                        <font color="#428bca">MITRA</font><font color="#000">SIAGA</font>
-                    </td>
-                    <td>
-                        <br><br>
-                        <font size="4px">
-                            <button onclick="navigateTo('/index.html')"><i class="fa fa-home"></i> Beranda</button>
-                            <a href="/index.html">KEMBALI KE FORTOPOLIO</a>
-                            <a href="utama.html">RUMAH SAKIT</a>
-                            <a href="about.html">TENTANG KAMI</a>
-                            <a href="doctor.html">DOKTER</a>
-                            <a href="contact.html">HUBUNGI KAMI</a>
-                        </font>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <button onclick="navigateTo('/index.html')"><i class="fa fa-home"></i> Beranda</button>
+        <a href="utama.html">RUMAH SAKIT</a>
+        <a href="about.html">TENTANG KAMI</a>
+        <a href="doctor.html">DOKTER</a>
+        <a href="contact.html">HUBUNGI KAMI</a>
     </div>
 
     <div class="bottom">
@@ -187,17 +220,18 @@
             <h4>Selamat Datang di Rumah Sakit Mitra Siaga</h4>
             <p>Rumah Sakit Mitra Siaga adalah pusat kesehatan terkemuka yang berkomitmen untuk memberikan pelayanan kesehatan terbaik kepada masyarakat. Dengan fasilitas medis modern dan tim medis yang profesional serta berdedikasi, kami berusaha untuk memberikan perawatan yang unggul dan inovatif.</p>
             <p>Kami menawarkan berbagai layanan kesehatan mulai dari perawatan umum hingga spesialisasi medis tingkat lanjut. Setiap anggota tim kami bekerja dengan penuh dedikasi untuk memastikan bahwa setiap pasien menerima perawatan terbaik sesuai dengan kebutuhan mereka.</p>
+        </div>
     </div>
 
     <div class="contact">
         <h4>Hubungi Kami</h4>
-        <p>Rumah Sakit Mitra  Siaga </p>
+        <p>Rumah Sakit Mitra Siaga</p>
         <p>Mitra Siaga & Research Center
             180, Shri Rampuri, Niwaru Road,
             Kaal Road, Benad, Bharatpur Raj 302020</p>
         <p>Margaasih - Kab. Bandung</p>
-        <p> Email: muhamadrizkisurya15@gmail.com</p>
-        <p> Contact No 083195008689</p>
+        <p>Email: muhamadrizkisurya15@gmail.com</p>
+        <p>Contact No: 083195008689</p>
         <div class="social-icons">
             <a href="#"><img src="/static/image/Fc.png" alt="Facebook"></a>
             <a href="#"><img src="/static/image/ig.png" alt="Instagram"></a>

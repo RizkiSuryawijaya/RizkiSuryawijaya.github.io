@@ -790,6 +790,8 @@ button:hover {
 }
 
 
+
+
 /* Base styles for the box using id */
 #box {
   width: 100%;
@@ -839,4 +841,86 @@ button:hover {
 
 .box-details .btn:hover {
   background-color: #0056b3;
+
+}
+/* Add this to your existing CSS file */
+
+/* Default styles for larger screens */
+.box-projek-terbaru {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box-projek-terbaru .box {
+    flex: 1 1 calc(50% - 20px); /* Two projects per row */
+    box-sizing: border-box;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .box-projek-terbaru .box {
+        flex: 1 1 100%; /* Full width for each project box */
+    }
+}
+
+/* style.css */
+.box-details {
+  margin-top: 15px;
+  text-align: center; /* Teks diatur menjadi rata tengah */
+}
+
+.box-details h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+  white-space: normal; /* Memastikan teks tidak terpotong */
+  overflow-wrap: break-word; /* Memungkinkan kata-kata panjang untuk pindah ke baris berikutnya */
+}
+
+.box-details p {
+  margin: 0;
+  color: #666;
+  font-size: 1em;
+  white-space: normal; /* Memastikan teks tidak terpotong */
+  overflow-wrap: break-word; /* Memungkinkan kata-kata panjang untuk pindah ke baris berikutnya */
+}
+
+
+/* Ensure text does not get cut off on smaller screens */
+.kegiatan-wrapper .box-details h3, 
+.kegiatan-wrapper .box-details h4, 
+.kegiatan-wrapper .box-details p {
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+/* Responsive Styles for "Kegiatan Saat Ini" Section */
+@media (max-width: 768px) {
+    .kegiatan-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kegiatan-wrapper .box {
+        width: 90%;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    }
+
+    .kegiatan-wrapper .box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .kegiatan-wrapper .box-details h3 {
+        font-size: 20px;
+    }
+
+    .kegiatan-wrapper .box-details p {
+        font-size: 16px;
+    }
+
 }
