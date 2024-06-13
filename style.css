@@ -924,3 +924,7 @@ button:hover {
     }
 
 }
+
+.box-details h3 {
+  color: white; /* White text for the heading */
+}

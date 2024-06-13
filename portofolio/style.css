@@ -124,3 +124,38 @@ body {
         padding: 20px;
     }
 }
+
+
+.buttonHeader {
+    text-align: center; /* Center-align the button */
+    margin-top: 20px; /* Add space above the button */
+}
+
+.buttonHeader .btn {
+    background-color: #3c0ff3; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 20px 40px; /* Increase padding for larger button */
+    text-align: center; /* Center the text (if it becomes multi-line) */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Get elements to line up nicely */
+    font-size: 20px; /* Increase font size */
+    margin: 10px 5px; /* Increase margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.buttonHeader .btn a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Ensure the link does not take full height */
+}
+
+.buttonHeader .btn:hover {
+    background-color: #ff0b0b; /* Darker blue background on hover */
+}
+
+.buttonHeader .btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
