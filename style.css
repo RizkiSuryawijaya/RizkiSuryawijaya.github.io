@@ -928,3 +928,30 @@ button:hover {
 .box-details h3 {
   color: white; /* White text for the heading */
 }
+
+/* Style untuk menu dan menu-bar */
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-bar {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu-bar {
+      display: block;
+  }
+}
