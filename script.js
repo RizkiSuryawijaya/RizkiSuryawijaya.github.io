@@ -60,14 +60,30 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function() {
     const menuLinks = document.querySelectorAll(".menu a");
     const menuBar = document.querySelector(".menu-bar");
+    const menu = document.querySelector(".menu");
 
+    // Function to close the menu
+    function closeMenu() {
+        menuBar.classList.remove("open");
+        menu.classList.remove("open");
+    }
+
+    // Close the menu when a menu link is clicked
     menuLinks.forEach(function(menuLink) {
-        menuLink.addEventListener("click", function() {
-            menuBar.classList.remove("open");
-        });
+        menuLink.addEventListener("click", closeMenu);
     });
 
-    menuBar.addEventListener("click", function() {
-        this.classList.toggle("open");
+    // Toggle the menu when the menu bar is clicked
+    menuBar.addEventListener("click", function(event) {
+        event.stopPropagation();  // Prevent the event from bubbling up to the document
+        menuBar.classList.toggle("open");
+        menu.classList.toggle("open");
+    });
+
+    // Close the menu when clicking outside the menu and menu bar
+    document.addEventListener("click", function(event) {
+        if (!menu.contains(event.target) && !menuBar.contains(event.target)) {
+            closeMenu();
+        }
     });
 });
