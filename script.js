@@ -57,3 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const menuLinks = document.querySelectorAll(".menu a");
+    const menuBar = document.querySelector(".menu-bar");
+
+    menuLinks.forEach(function(menuLink) {
+        menuLink.addEventListener("click", function() {
+            menuBar.classList.remove("open");
+        });
+    });
+
+    menuBar.addEventListener("click", function() {
+        this.classList.toggle("open");
+    });
+});
