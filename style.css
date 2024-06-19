@@ -1026,7 +1026,6 @@ button:hover {
   }
 }
 
-
 /* General Styles */
 .container {
   width: 90%;
@@ -1202,47 +1201,6 @@ button:hover {
   font-size: 1em;
   color: #555;
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .StarUp h1 {
-      font-size: 2em;
-  }
-
-  .r-technology h2,
-  .kutipan-mahasiswa h2,
-  .youtube-videos h2 {
-      font-size: 2em;
-  }
-
-  .box-r-technology .box,
-  .box-kutipan .box,
-  .box-videos .video {
-      min-width: 100%;
-      max-width: 100%;
-  }
-
-  .box-videos iframe {
-      height: 215px;
-  }
-}
-
-@media (max-width: 480px) {
-  .StarUp h1 {
-      font-size: 1.5em;
-  }
-
-  .r-technology h2,
-  .kutipan-mahasiswa h2,
-  .youtube-videos h2 {
-      font-size: 1.5em;
-  }
-
-  .box-videos iframe {
-      height: 180px;
-  }
-}
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
